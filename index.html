@@ -4,8 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChoctoTip</title>
-  <script type="module" crossorigin src="/ChoctoTip-Website/assets/index-IBcIu8Nh.js"></script>
-  <link rel="stylesheet" crossorigin href="/ChoctoTip-Website/assets/index-BvoqVu4w.css">
+  <style>
+    /* Scoped styles for the Get Started two-column layout */
+    #get-started .get-started-row {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    #get-started .get-started-column {
+      flex: 1;
+      min-width: 260px;
+    }
+    #get-started .get-started-column p {
+      margin: 0 0 0.5rem 0;
+    }
+    #get-started .get-started-column .btn {
+      margin-top: 0.25rem;
+    }
+    @media (max-width: 600px) {
+      #get-started .get-started-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/ChoctoTip-Website/assets/index-BDXNIMtA.js"></script>
+  <link rel="stylesheet" crossorigin href="/ChoctoTip-Website/assets/index-tvEz3Gbd.css">
 </head>
 <body>
   <!-- ================== Navigation ================== -->
@@ -16,6 +40,8 @@
       <li><a href="#tips">Tips</a></li>
       <li><a href="#get-started">Get Started</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://discord.com/oauth2/authorize?client_id=1416167216621293588&permissions=431644732480&integration_type=0&scope=bot" class="btn">Invite to Discord</a></li>
+
     </ul>
   </nav>
 
@@ -27,6 +53,21 @@
 
   <!-- ================== Main Content ================== -->
   <main class="container">
+    <!-- Get Started Section -->
+    <section class="info" id="get-started">
+      <h2>Get Started</h2>
+      <div class="get-started-row">
+        <div class="get-started-column">
+          <p>Invite ChoctoTip to your Discord server and start tipping instantly!</p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1416167216621293588&permissions=431644732480&integration_type=0&scope=bot" class="btn">Invite to Discord</a>
+        </div>
+        <div class="get-started-column">
+          <p>Join the ChoctoTip Discord server for support, updates, and airdrops.</p>
+          <a href="https://discord.gg/K2qNgqSFn6" class="btn">ChoctoTip Discord</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Tips Section -->
     <section class="stats" id="tips">
       <h2>Latest Tips</h2>
@@ -38,23 +79,17 @@
       </ul>
     </section>
 
-    <!-- Get Started Section -->
-    <section class="info" id="get-started">
-      <h2>Get Started</h2>
-      <p>Invite ChoctoTip to your Discord server and start tipping instantly!</p>
-      <a href="#" class="btn">Invite to Discord</a>
-    </section>
-
     <!-- FAQ Section -->
     <section class="info faq-section" id="faq">
       <h2>FAQ</h2>
       <div class="faq-item">
         <h3>How do I tip someone?</h3>
-        <p>Use the bot command /tip followed by the user and amount.</p>
+        <p>Use the bot command /tip followed by the user, amount and token type.</p>
+        <p><a href="docs.html" class="btn">Full docs</a></p>
       </div>
       <div class="faq-item">
         <h3>Which currencies are supported?</h3>
-        <p>BTC, ETH, USDT, and other popular tokens.</p>
+        <p>The Solana blockchain tokens are the supported coin sets.  This includes, SOL, USDC, Choctopus, Smello, and more!</p>
       </div>
       <div class="faq-item">
         <h3>Is it free?</h3>
